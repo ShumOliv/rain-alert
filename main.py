@@ -38,7 +38,7 @@ if will_rain:
        message = client.messages.create(
            body="It's going to rain today. Remember to bring an umbrella!☂️",
            from_= os.environ.get("TWILIO_FROM"),
-           to= os.environ.get"TWILIO_TO",
+           to= os.environ.get("TWILIO_TO"),
        )
        print(message.status)
        # print(message.body)
