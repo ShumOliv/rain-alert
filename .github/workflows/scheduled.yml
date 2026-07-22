@@ -14,7 +14,7 @@ on:
     # ║                                                                ║
     # ║  Use https://time.is/UTC to find your local time in UTC       ║
     # ╚═══════════════════════════════════════════════════════════════╝
-    - cron: '03 46 * * *'
+    - cron: '05 4 * * *'
 
   # This adds a "Run workflow" button so you can test manually
   workflow_dispatch:
@@ -30,7 +30,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.14'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -44,7 +44,7 @@ jobs:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
           ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-        run: python main.py
+        # run: python main.py
           # Add more secrets in Settings > Secrets > Actions
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
