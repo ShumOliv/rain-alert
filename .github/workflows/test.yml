@@ -26,6 +26,8 @@ jobs:
           OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
           ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          TWILIO_FROM: ${{ secrets.TWILIO_FROM }}
+          TWILIO_TO: ${{ secrets.TWILIO_TO }}
         run: |
           if [ -z "$OWM_API_KEY" ]; then
             echo "OWM_API_KEY secret is not set!"
